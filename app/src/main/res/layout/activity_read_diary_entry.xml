@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ReadDiaryEntry">
+
+
+    <TextView
+        android:id="@+id/dateInReadDiaryEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/anton"
+        tools:text="13-06-1962"
+        android:textColor="#808080"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/belowForText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aboveForText" />
+
+    <ImageView
+        android:id="@+id/update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/edit"
+        android:layout_margin="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/aboveForText"
+        app:layout_constraintLeft_toRightOf="@id/leftForEditIcon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/belowForText"/>
+
+    <TextView
+        android:id="@+id/entryInReadDiaryEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical= "@color/gray"
+        tools:text="@string/longText"
+        android:textStyle="italic"
+        android:textColor="#808080"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintTop_toBottomOf="@id/belowForText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/aboveForText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftForEditIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/belowForText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
